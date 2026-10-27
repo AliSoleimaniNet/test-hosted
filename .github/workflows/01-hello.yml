@@ -1,0 +1,10 @@
+# Lab A1 - hosted runner
+name: hello
+on: [push, workflow_dispatch]
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: echo "Runner ${{ runner.name }}"
+      - run: uname -a && whoami
